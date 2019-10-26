@@ -10,6 +10,7 @@
     "no-trailing-spaces": [2, { "skipBlankLines": true }],
     "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1 }],
     "array-element-newline": ["error", "consistent"],
+    "no-plusplus": 0,
 
     "prettier/prettier": [
       "error",
