@@ -10,12 +10,12 @@ const Block = styled.div`
   ${noselect}
   ${flex('center', 'center')}
   background: transparent;
-  border: 0.5px solid black;
+  border: 0.5px solid white;
   height: 33.333%;
   width: 33.333%;
   &:hover {
     cursor: pointer;
-    border: 3px solid red;
+    border: 3px solid orange;
   }
   &.Naught {
     ${backgroundProvider(naught)}
