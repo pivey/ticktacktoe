@@ -20,12 +20,10 @@ const StartBtn = styled.div`
     background: green;
     color: white;
     border: 4px solid white;
+    cursor: pointer;
   }
 `;
 
-const StartScreen = ({ text, clickHandle }) => {
-  const peter = 'tired';
-  return <StartBtn onClick={clickHandle}>{text}</StartBtn>;
-};
+const StartScreen = ({ text, clickHandle }) => <StartBtn onClick={() => clickHandle(2)}>{text}</StartBtn>;
 
 export default StartScreen;
