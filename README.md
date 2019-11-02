@@ -9,3 +9,6 @@ React TickTackToe.
 7. styling for mobiles
 8. remove uneccessary styling
 9. optimize alerts
+10. add sumbit on enter for user page submit button
+11. add validation for inputs so that you must enter somthing to continue - no empty inputs
+12. add playback for each move from the beginning to the end

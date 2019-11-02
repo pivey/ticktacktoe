@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import globals from '../globals';
-import naught from '../assets/naught.png';
-import cross from '../assets/cross.svg';
+import naught from '../assets/naught3.svg';
+import cross from '../assets/whiteX.svg';
 
 const { backgroundProvider, noselect, flex } = globals;
 

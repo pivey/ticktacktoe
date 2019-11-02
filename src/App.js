@@ -62,17 +62,22 @@ function App() {
   const [player, setPlayer] = useState(null);
   const [playerObject, setPlayerObject] = useState([]);
   const [hasWon, setHasWon] = useState(false);
+  const [turn, setTurn] = useState('Scoreboard');
   const gameStart = e => {
     setPress(e);
   };
 
+  // let scoreBoardName = 'Scoreboard';
+
+  const pattern = /^([\w\d]{0,10})$/g;
+
   const submitHandle = e => {
-    if (e.key === 'Enter') {
+    if (e.user1.match(pattern)[0] && e.user2.match(pattern)[0]) {
       setPlayer(e);
       setPress(press + 1);
     } else {
-      setPlayer(e);
-      setPress(press + 1);
+      alert('Both fields are required');
+      e.preventDefault();
     }
   };
 
@@ -81,6 +86,7 @@ function App() {
   const countFromChild = e => {
     counter = e;
     if (counter % 2 === 0) {
+      setTurn(`${player.user1.charAt(0).toUpperCase() + player.user1.slice(1)} - Naught`);
       setPlayerObject(prevState => [
         ...prevState,
         <PlayerDiv className="slide-in-left color-change-5x">
@@ -88,6 +94,7 @@ function App() {
         </PlayerDiv>,
       ]);
     } else {
+      setTurn(`${player.user2.charAt(0).toUpperCase() + player.user2.slice(1)} - Cross`);
       setPlayerObject(prevState => [
         ...prevState,
         <PlayerDiv className="slide-in-left color-change-5x">
@@ -100,6 +107,7 @@ function App() {
   const won = e => {
     setHasWon(e);
     setPlayerObject([]);
+    setTurn('Scoreboard');
   };
 
   if (trackerRef.current) {
@@ -107,7 +115,7 @@ function App() {
     trackerHeight = trackerRef.current.clientHeight - scoreHeight;
   }
 
-  useEffect(() => {}, [press, player, counter, playerObject, hasWon]);
+  useEffect(() => {}, [press, player, counter, playerObject, hasWon, turn]);
 
   const selection =
     (press === 1 && (
@@ -124,7 +132,7 @@ function App() {
       <FlexDiv>
         <TrackerHolder ref={trackerRef}>
           <TrackerTitle className="slide-in-left" ref={scoreTitle}>
-            Scoreboard
+            {turn}
           </TrackerTitle>
           {playerObject}
         </TrackerHolder>

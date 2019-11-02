@@ -44,14 +44,14 @@ const Board = props => {
       setTimeout(() => {
         if (won === false) {
           for (let i = 0; i < 8; i++) {
-            if (count === 9 && !won) {
-              alert('The game ended in a draw');
-              resetter();
-            } else if (checker(Naught, winningScenarios[i])) {
+            if (checker(Naught, winningScenarios[i])) {
               alert('Naughts wins');
               resetter();
             } else if (checker(Cross, winningScenarios[i])) {
               alert('Crosses wins');
+              resetter();
+            } else if (count === 9 && !won) {
+              alert('The game ended in a draw');
               resetter();
             }
           }
@@ -69,7 +69,7 @@ const Board = props => {
           Cross = [];
           won = false;
         }
-      }, 200);
+      }, 100);
     }
   };
 

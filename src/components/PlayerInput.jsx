@@ -12,7 +12,7 @@ const Description = styled.div`
   animation: ${fadeIn} ease 0.4s;
 `;
 
-const InputMother = styled.div`
+const InputMother = styled.form`
   ${flex('center', 'center', 'column')}
   height: 15rem;
   width: 15rem;
@@ -43,18 +43,16 @@ const NameInput = styled.input`
   }
 `;
 
-const SubmitBtn = styled.button`
+const SubmitBtn = styled.input`
   color: white;
   background: #034732;
-  font-size: 1.1rem;
-  padding: 0.8rem 2.5rem;
   border-width: 2px;
   border-color: transparent;
   border-style: solid;
   border-radius: 5px;
   text-align: center;
-  height: 8rem;
-  width: 8rem;
+  width: 5rem;
+  padding: 0.8rem 0rem;
   animation: ${fadeIn} ease 0.4s;
   &:hover {
     color: #d60361;
@@ -69,20 +67,27 @@ const PlayerInput = props => {
     user2: '',
   });
 
+  const pattern = /^([\w\d]{0,10})$/g;
+
   const valueHandler = ({ target: { name, value } }) => {
-    setUser({ ...user, [name]: value });
+    if (value.match(pattern)[0]) {
+      setUser({ ...user, [name]: value });
+    } else {
+      alert('only letters or numbers. Max 10 characters');
+    }
   };
 
   return (
     <>
       <InputMother>
         <Description>Enter your player names</Description>
+
         <NameInput
           placeholder="Player 1" //
           className="scale-in-center" //
           type="text" //
           spellcheck="false" //
-          required //
+          Required //
           name="user1"
           autoComplete="off"
           value={user.user1}
@@ -93,15 +98,13 @@ const PlayerInput = props => {
           className="scale-in-center" //
           type="text" //
           spellcheck="false" //
-          required //
+          Required //
           name="user2"
           autoComplete="off"
           value={user.user2}
           onChange={valueHandler}
         />
-        <SubmitBtn type="button" onClick={() => props.submit(user)}>
-          Submit
-        </SubmitBtn>
+        <SubmitBtn type="submit" onClick={() => props.submit(user)} value="Submit" />
       </InputMother>
     </>
   );
