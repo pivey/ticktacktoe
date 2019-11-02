@@ -1,6 +1,6 @@
 React TickTackToe.
 
-1. Utilising refs to their fullest extent
+1. Refs are utilise to produce accurate and dynamic styling
 2. Implement add ons from: https://medium.com/@thekevinwang/react-%EF%B8%8F-tic-tac-toe-%EF%B8%8F%E2%83%A3-extras-88e68f025772
 3. Add and try out JS docs : https://www.npmjs.com/package/jsdoc
 4. use SVGR for svg formatting https://www.npmjs.com/package/@svgr/webpack

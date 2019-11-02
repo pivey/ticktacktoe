@@ -14,15 +14,15 @@ const Description = styled.div`
 
 const InputMother = styled.form`
   ${flex('center', 'center', 'column')}
-  height: 15rem;
-  width: 15rem;
+  height: 22rem;
+  width: 22rem;
   background: transparent;
 `;
 
 const NameInput = styled.input`
   width: 70%;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.2rem;
   background: #bfd0e0;
   color: black;
   padding: 0.8rem 2.5rem;
