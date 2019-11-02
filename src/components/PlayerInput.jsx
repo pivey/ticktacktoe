@@ -23,25 +23,33 @@ const NameInput = styled.input`
   width: 70%;
   text-align: center;
   font-size: 18px;
+  background: #bfd0e0;
+  color: black;
   padding: 0.8rem 2.5rem;
-  border-width: 2px;
-  border-color: black;
+  border-width: 3px;
+  border-color: transparent;
+  border-radius: 2px;
   border-style: solid;
   font-weight: bold;
   margin-bottom: 2rem;
   &:focus {
+    color: #d60361;
+    border-color: #d60361;
+    background: white;
+  }
+  ::placeholder {
     color: black;
-    background: pink;
+    opacity: 0.4;
   }
 `;
 
 const SubmitBtn = styled.button`
-  color: black;
-  background: green;
-  font-size: 12px;
+  color: white;
+  background: #034732;
+  font-size: 1.1rem;
   padding: 0.8rem 2.5rem;
   border-width: 2px;
-  border-color: black;
+  border-color: transparent;
   border-style: solid;
   border-radius: 5px;
   text-align: center;
@@ -49,8 +57,8 @@ const SubmitBtn = styled.button`
   width: 8rem;
   animation: ${fadeIn} ease 0.4s;
   &:hover {
-    color: white;
-    border: 3px solid white;
+    color: #d60361;
+    border: 2px solid #d60361;
     cursor: pointer;
   }
 `;
@@ -68,7 +76,7 @@ const PlayerInput = props => {
   return (
     <>
       <InputMother>
-        <Description>Enter your usernames</Description>
+        <Description>Enter your player names</Description>
         <NameInput
           placeholder="Player 1" //
           className="scale-in-center" //

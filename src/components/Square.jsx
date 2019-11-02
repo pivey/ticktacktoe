@@ -15,13 +15,20 @@ const Block = styled.div`
   width: 33.333%;
   &:hover {
     cursor: pointer;
-    border: 3px solid orange;
+    border: 5px dashed #d60361;
+    opacity: 0.8;
   }
   &.Naught {
     ${backgroundProvider(naught)}
+    pointer-events: none;
   }
   &.Cross {
     ${backgroundProvider(cross)}
+    pointer-events: none;
+  }
+  &.fade-in {
+    -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   }
 `;
 
