@@ -24,4 +24,4 @@
     \*\* in larger apps I would use 'Formiq', 'Yup' (frontend validation) and 'Joi' (backend validation)
 5.  animations and keyframes
 6.  worked with SVG's and improved knowledge of app architecture.
-7.
+7.  deployed to heroku
