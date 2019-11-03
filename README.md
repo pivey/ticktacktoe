@@ -1,4 +1,4 @@
-**_ React TickTackToe _**
+** React TickTackToe **
 
 1. add reset button when the game ends to go back to start screen
 2. pass player names down to board so that you can alert who won, not just naughts or crossses
@@ -8,13 +8,13 @@
 6. add a global controll panel for colors and themes
 7. remove uneccessary styling
 
-**_ to try in this app: _**
+** to try in this app: **
 
 - Add and try out JS docs : https://www.npmjs.com/package/jsdoc
 - use SVGR for svg formatting https://www.npmjs.com/package/@svgr/webpack
 - inspiration for add ons to the app come from: https://medium.com/@thekevinwang/react-%EF%B8%8F-tic-tac-toe-%EF%B8%8F%E2%83%A3-extras-88e68f025772
 
-**_ Done: _**
+** Done: **
 
 1.  Refs to produce accurate and dynamic styling of elements
 2.  state + prop drilling to passinformation from parent to child and vice versa
