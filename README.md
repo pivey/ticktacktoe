@@ -23,3 +23,4 @@
 4.  form validation using regex to avoid submitting empty or incorrect info
     \*\* in larger apps I would use 'Formiq', 'Yup' (frontend validation) and 'Joi' (backend validation)
 5.  animations and keyframes
+6.  worked with SVG's and improved knowledge of app architecture.
