@@ -1,14 +1,25 @@
-React TickTackToe.
+**_ React TickTackToe _**
 
-1. Refs are utilise to produce accurate and dynamic styling
-2. Implement add ons from: https://medium.com/@thekevinwang/react-%EF%B8%8F-tic-tac-toe-%EF%B8%8F%E2%83%A3-extras-88e68f025772
-3. Add and try out JS docs : https://www.npmjs.com/package/jsdoc
-4. use SVGR for svg formatting https://www.npmjs.com/package/@svgr/webpack
-5. add a global controll panel for colors and themes
-6. add reset button when the game ends to go back to start screen
-7. styling for mobiles
-8. remove uneccessary styling
-9. optimize alerts
-10. add sumbit on enter for user page submit button
-11. add validation for inputs so that you must enter somthing to continue - no empty inputs
-12. add playback for each move from the beginning to the end
+1. add reset button when the game ends to go back to start screen
+2. pass player names down to board so that you can alert who won, not just naughts or crossses
+3. add winning message in the scoreboard message at the top instead of alert.
+4. add playback for each move from the beginning to the end
+5. styling for mobiles
+6. add a global controll panel for colors and themes
+7. remove uneccessary styling
+
+**_ to try in this app: _**
+
+- Add and try out JS docs : https://www.npmjs.com/package/jsdoc
+- use SVGR for svg formatting https://www.npmjs.com/package/@svgr/webpack
+- inspiration for add ons to the app come from: https://medium.com/@thekevinwang/react-%EF%B8%8F-tic-tac-toe-%EF%B8%8F%E2%83%A3-extras-88e68f025772
+
+**_ Done: _**
+
+1.  Refs to produce accurate and dynamic styling of elements
+2.  state + prop drilling to passinformation from parent to child and vice versa
+    \*\* in larger apps I would use app context to pass info around, in this case drilling is faster + good practice.
+3.  global function store to reduce code throughout the app and make tracing mistakes easier.
+4.  form validation using regex to avoid submitting empty or incorrect info
+    \*\* in larger apps I would use 'Formiq', 'Yup' (frontend validation) and 'Joi' (backend validation)
+5.  animations and keyframes
