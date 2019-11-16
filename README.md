@@ -1,3 +1,6 @@
+Check it out and have a play around: 
+https://reactticktacktoe.herokuapp.com/
+
 \***\* React TickTackToe \*\***
 
 1. add reset button when the game ends to go back to start screen
