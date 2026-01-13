@@ -6,7 +6,7 @@
     "jsdoc": "^3.6.3",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0",
+    "react-scripts": "5.0.1",
     "styled-components": "^4.4.0"
   },
   "scripts": {
@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
-    "eslint": "^5.16.0",
+    "eslint": "^9.39.1",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^4.3.0",
     "eslint-config-wesbos": "0.0.19",
